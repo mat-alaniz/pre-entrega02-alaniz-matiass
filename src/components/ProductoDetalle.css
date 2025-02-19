@@ -1,0 +1,41 @@
+.producto-detalle {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 800px; /* Aumenta el ancho máximo */
+    margin: 20px auto;
+    overflow: hidden; /* Evita el desplazamiento */
+    max-height: 90vh; /* Limita la altura máxima */
+}
+
+.producto-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.producto-descripcion {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.producto-precio {
+    font-size: 50px;
+    font-weight: bold;
+    color: #27ae60;
+    text-align: center;
+}
+
+.producto-detalle img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin recortarse */
+    max-height: 500px; /* Aumenta la altura máxima de la imagen */
+    filter: brightness(1.1); /* Mejora la claridad de la imagen */
+}

@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ItemListContainer.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const ItemListContainer = ({Data}) => {
-    console.log(Data)
+    const {categoryId} = useParams();
+    
+    const [filtro , setFiltro] = useState([]);
+
+    useEffect(()=>{
+        if(categoryId){
+            const filtros = Data.filter(item => item.category === categoryId);
+            setFiltro(filtros);
+        }
+    else{
+        setFiltro(Data);
+    }
+
+    },[categoryId, Data]);
+
     return (
         <div className="item-list-container">
-            <h1 className="title">Lista de productos</h1>
+            <h1 className="title">Lista de productos {categoryId && `- ${categoryId}`}</h1>
             <div className="items">
-                {Data.map((item, index) => {
+                {filtro.map((item, index) => {
                     return (
                         <div key={index} className="item">
                             <h3 className="item-title">{item.title}</h3>
