@@ -32,10 +32,21 @@
 }
 
 .producto-detalle img {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     margin-bottom: 20px;
     object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin recortarse */
     max-height: 500px; /* Aumenta la altura máxima de la imagen */
     filter: brightness(1.1); /* Mejora la claridad de la imagen */
+}
+.btn-addcart{
+    background-color: #27ae60;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
